@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Floating modal window -->
+    <div id="overlay"></div>
+    <div id="thankYouModal">
+        <strong>Thank you for sharing your insights!</strong>
+    </div>
+    
     <!-- Header Section -->
     <header>
         <div class="container">
@@ -39,7 +45,7 @@
             <div class="hero-content">
                 <h2>Experience the Perfect Brew</h2>
                 <p>Artisan coffee crafted with passion and precision</p>
-                <a href="#menu" class="btn">View Our Menu</a>
+                <a href="#menu" class="btn">Blogs and Events</a>
             </div>
         </div>
     </section>
@@ -112,7 +118,7 @@
                     <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Coffee Art">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1515592302748-6937af392024?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Coffee Shop">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Coffee Shop">
                 </div>
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Coffee Beans">
@@ -121,7 +127,7 @@
                     <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Coffee Farm">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1507133750040-4a37f2d12f8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Coffee Preparation">
+                    <img src="https://images.unsplash.com/photo-1643142546284-13a539562d3c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZmZlZSUyMHByZXBhcmF0aW9ufGVufDB8fDB8fHww" alt="Coffee Preparation">
                 </div>
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Coffee Cup">
@@ -178,15 +184,15 @@
             
             <div class="testimonial-form">
                 <h3>Share Your Experience</h3>
-                <form id="testimonialForm">
+                <form id="testimonialForm" method="POST">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Your Title/Occupation">
+                        <input type="text" name="title" placeholder="Your Title/Occupation">
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Experience" required></textarea>
+                        <textarea name="message" placeholder="Your Experience" required></textarea>
                     </div>
                     <button type="submit" class="btn">Submit Testimonial</button>
                 </form>

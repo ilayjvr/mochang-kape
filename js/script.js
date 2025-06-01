@@ -122,54 +122,45 @@ document.addEventListener('DOMContentLoaded', function() {
         
         currentTestimonial = index;
     }
-    
-    // Form Submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Simple form validation
-            if (!name || !email || !message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // Here you would typically send the form data to a server
-            // For this example, we'll just show a success message
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
-        });
+
+    function showThankYouModal(message) {
+        const modal = document.getElementById('thankYouModal');
+        const overlay = document.getElementById('overlay');
+
+        modal.querySelector('strong').textContent = message;
+        modal.style.display = 'block';
+        overlay.style.display = 'block';
+
+        // Auto-hide after 3 seconds
+        setTimeout(() => {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }, 3000);
     }
     
-    // Testimonial Form Submission
-    const testimonialForm = document.getElementById('testimonialForm');
-    if (testimonialForm) {
-        testimonialForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = testimonialForm.querySelector('input[placeholder="Your Name"]').value;
-            const title = testimonialForm.querySelector('input[placeholder="Your Title/Occupation"]').value;
-            const experience = testimonialForm.querySelector('textarea').value;
-            
-            if (!name || !experience) {
-                alert('Please fill in all required fields.');
-                return;
+    document.getElementById("testimonialForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch("submit_testimonial.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "success") {
+                showThankYouModal("Thank you for sharing your insights!");
+            } else {
+                alert("Error: " + data.message);
             }
-            
-            // Here you would typically send the testimonial data to a server
-            // For this example, we'll just show a success message
-            alert('Thank you for sharing your experience! Your testimonial will be reviewed and published soon.');
-            testimonialForm.reset();
+        })  
+        .catch(error => {
+            alert("Request failed: " + error);
         });
-    }
-    
+        this.reset();
+    });
+
     // Newsletter Form
     const newsletterForm = document.getElementById('newsletterForm');
     if (newsletterForm) {
@@ -183,8 +174,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Here you would typically send the email to a server
-            // For this example, we'll just show a success message
             alert('Thank you for subscribing to our newsletter!');
             newsletterForm.reset();
         });
