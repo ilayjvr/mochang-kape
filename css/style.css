@@ -125,10 +125,14 @@ header .container {
     padding: 20px 15px;
 }
 
-.logo h1 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    font-weight: 700;
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px;
+    width: auto;
 }
 
 .nav-menu {
@@ -489,9 +493,11 @@ footer {
     margin-bottom: 50px;
 }
 
-.footer-logo h2 {
-    font-size: 1.8rem;
+.footer-logo img {
+    max-height: 50px;
+    width: auto;
     margin-bottom: 15px;
+    filter: brightness(0) invert(1);
 }
 
 .footer-links h3,
@@ -704,7 +710,19 @@ footer {
     }
     
     .footer-newsletter form {
-        max-width: 300px;
+        max-width: 100%;
         margin: 0 auto;
+        flex-direction: column;
+    }
+    
+    .footer-newsletter input {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-newsletter button {
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px;
     }
 }
