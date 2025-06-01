@@ -4,14 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Mochang Kape</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- About Hero Section -->
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Mochang Kape Logo">
+                </a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   <!-- About Hero Section -->
     <section class="about-hero d-flex align-items-center">
         <div class="container">
             <div class="row justify-content-center">
@@ -19,6 +42,179 @@
                     <h1 class="display-4 fw-bold mb-3">About Mochang Kape</h1>
                     <p class="lead">Discover our story, values, and commitment to quality coffee</p>
                     <a href="index.html" class="btn btn-outline-light mt-3"><i class="fas fa-chevron-left me-2"></i>Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="about-page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Mission</h2>
+                <p>What drives us every day</p>
+            </div>
+            <div class="about-card">
+                <div class="about-card-icon">
+                    <i class="fas fa-bullseye"></i> 
+                </div>
+                <h3>Crafting Perfect Coffee Experiences</h3>
+                <p>At Mochang Kape, our mission is to create exceptional coffee experiences that bring joy and connection to our community. We believe that a great cup of coffee has the power to brighten someone's day and create meaningful moments.</p>
+                <p>We strive to source the finest beans, perfect our craft, and deliver consistent quality in every cup we serve. Our commitment extends beyond the coffee itself to creating a warm, welcoming environment where people can gather, connect, and feel at home.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="about-page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Values</h2>
+                <p>The principles that guide us</p>
+            </div>
+            <div class="about-cards" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;">
+                <div class="about-card" style="width: 100%; max-width: 100%;">
+                    <div class="about-card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Quality</h3>
+                    <p>We never compromise on quality. From bean selection to brewing techniques, we maintain the highest standards to ensure every cup is exceptional.</p>
+                </div>
+                <div class="about-card" style="width: 100%; max-width: 100%;">
+                    <div class="about-card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>We believe in building strong relationships with our customers, suppliers, and the communities where we operate.</p>
+                </div>
+                <div class="about-card" style="width: 100%; max-width: 100%;">
+                    <div class="about-card-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>We are committed to environmentally responsible practices throughout our supply chain and operations.</p>
+                </div>
+            </div>
+            
+            <style>
+                @media (max-width: 768px) {
+                    .about-cards {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            </style>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="about-page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Commitment to Sustainability</h2>
+                <p>Our environmental responsibility</p>
+            </div>
+            <div class="about-card">
+                <div class="about-card-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3>Eco-Friendly Practices</h3>
+                <p>Sustainability isn't just a buzzword for us—it's a core part of our business model. We implement eco-friendly practices across all aspects of our operations:</p>
+                <ul style="margin-left: 20px; margin-top: 15px; margin-bottom: 15px;">
+                    <li>Compostable cups, lids, and packaging</li>
+                    <li>Energy-efficient equipment and lighting</li>
+                    <li>Water conservation practices</li>
+                    <li>Waste reduction and recycling programs</li>
+                    <li>Supporting reforestation projects in coffee-growing regions</li>
+                </ul>
+                <p>We're constantly looking for new ways to reduce our environmental footprint while maintaining the quality of our products.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sourcing Section -->
+    <section class="about-page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sourcing Practices</h2>
+                <p>How we select our beans</p>
+            </div>
+            <div class="sourcing-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div class="about-img" style="width: 100%; max-width: 100%; height: auto; overflow: hidden; border-radius: 10px;">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Coffee Farm" style="width: 100%; height: auto; display: block;">
+                </div>
+                <div class="about-card" style="margin-bottom: 0;">
+                    <h3>Direct Trade Relationships</h3>
+                    <p>We build direct relationships with coffee farmers around the world, ensuring fair compensation and sustainable farming practices. Our sourcing team regularly visits farms to:</p>
+                    <ul style="margin-left: 20px; margin-top: 15px;">
+                        <li>Select the highest quality beans</li>
+                        <li>Ensure ethical labor practices</li>
+                        <li>Support sustainable farming methods</li>
+                        <li>Invest in community development projects</li>
+                    </ul>
+                    <p style="margin-top: 15px;">By working directly with farmers, we can trace every bean back to its source, ensuring transparency throughout our supply chain.</p>
+                </div>
+            </div>
+            
+            <style>
+                @media (max-width: 768px) {
+                    .sourcing-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                    .about-img {
+                        margin-bottom: 20px;
+                    }
+                }
+            </style>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="about-page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Team</h2>
+                <p>The passionate people behind Mochang Kape</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="John Doe">
+                    <h4>John Doe</h4>
+                    <p>Founder & Master Roaster</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Jane Smith">
+                    <h4>Jane Smith</h4>
+                    <p>Head Barista</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Michael Brown">
+                    <h4>Michael Brown</h4>
+                    <p>Sourcing Manager</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Sarah Johnson">
+                    <h4>Sarah Johnson</h4>
+                    <p>Sustainability Director</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -35,11 +231,11 @@
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html#menu">Menu</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
