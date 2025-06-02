@@ -3,9 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog & Events - Mochang Kape</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blogs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Mochang Kape Logo">
+                </a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://plus.unsplash.com/premium_photo-1675435646209-24c008f31d92?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGNvZmZlZSUyMGJsb2dzfGVufDB8fDB8fHww'); background-size: cover; background-position: center; padding: 100px 0; margin-top: 90px; text-align: center; color: white;">
+        <div class="container">
+            <h1>Blog & Events</h1>
+            <p>Stay updated with our latest news, events, and coffee insights</p>
+            <a href="index.html" class="btn btn-outline-light mt-3"><i class="fas fa-chevron-left me-2"></i>Back to Home</a>
+        </div>
+    </section>
+
+    <!-- Latest Blog Posts Section -->
+    <section class="blog-page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Blog Posts</h2>
+                <p>Coffee stories, tips, and insights</p>
+            </div>
+            
+            <!-- Page 1 -->
+            <div id="blog-page-1" class="blog-pages active">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1585435247026-1d8560423d52?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvZmZlZSUyMGJyZXdpbmclMjBtZXRob2RzfGVufDB8fDB8fHww" alt="Coffee Brewing Methods">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">June 15, 2023</span>
+                        <h3 class="blog-title">Pour-Over 101: Brewing Better, One Drop at a Time</h3>
+                        <p class="blog-excerpt">Discover the nuances of pour-over brewing and how this method brings out the complex flavors in your favorite coffee beans.</p>
+                        <div>
+                            <span class="blog-tag">Brewing</span>
+                            <span class="blog-tag">Tips</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1549883498-9c1eb45b3cae?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coffee Origins">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">May 28, 2023</span>
+                        <h3 class="blog-title">Exploring Ethiopian Coffee Regions</h3>
+                        <p class="blog-excerpt">Take a flavorful journey through Ethiopia's diverse coffee-growing regions and discover what makes each area's beans uniquely complex, aromatic, and delicious.</p>
+                        <div>
+                            <span class="blog-tag">Origins</span>
+                            <span class="blog-tag">Education</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1632996988649-0da4de31eef0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coffee Recipes">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">April 10, 2023</span>
+                        <h3 class="blog-title">Summer Coffee Cocktail Recipes</h3>
+                        <p class="blog-excerpt">Beat the heat with these refreshing coffee cocktails that are perfect for summer gatherings and afternoon relaxation.</p>
+                        <div>
+                            <span class="blog-tag">Recipes</span>
+                            <span class="blog-tag">Seasonal</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Page 2 -->
+            <div id="blog-page-2" class="blog-pages">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1537084278693-d597e79f2939?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGNvZmZlZSUyMGVxdWlwbWVudHN8ZW58MHx8MHx8fDA%3D" alt="Coffee Equipment">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">March 22, 2023</span>
+                        <h3 class="blog-title">Essential Equipment for Home Baristas</h3>
+                        <p class="blog-excerpt">Looking to elevate your home coffee game? Here are the essential, expert-approved tools every aspiring home barista should invest in for better brews.</p>
+                        <div>
+                            <span class="blog-tag">Equipment</span>
+                            <span class="blog-tag">Home Brewing</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1536227661368-deef57acf708?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coffee Health">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">February 14, 2023</span>
+                        <h3 class="blog-title">The Health Benefits of Coffee</h3>
+                        <p class="blog-excerpt">Recent studies have shown numerous health benefits associated with moderate coffee consumption. Learn how your daily cup might be boosting your health.</p>
+                        <div>
+                            <span class="blog-tag">Health</span>
+                            <span class="blog-tag">Wellness</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1661512161581-4b975592afd7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29mZmVlJTIwc3RvcmFnZXxlbnwwfHwwfHx8MA%3D%3D" alt="Coffee Storage">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">January 5, 2023</span>
+                        <h3 class="blog-title">Proper Coffee Storage Techniques</h3>
+                        <p class="blog-excerpt">Keep your coffee beans fresh, aromatic, and flavorful with these expert-recommended storage tips that help preserve their quality and taste for longer.</p>
+                        <div>
+                            <span class="blog-tag">Storage</span>
+                            <span class="blog-tag">Tips</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Page 3 -->
+            <div id="blog-page-3" class="blog-pages">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1649616549853-e48bebe89c25?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlJTIwc3VzdGFpbmFiaWxpdHl8ZW58MHx8MHx8fDA%3D" alt="Coffee Sustainability">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">December 12, 2022</span>
+                        <h3 class="blog-title">From Bean to Brew: Sustainability in Every Step</h3>
+                        <p class="blog-excerpt">Explore how sustainable farming practices are transforming the future of coffee production and learn how you can support a more eco-friendly coffee industry.</p>
+                        <div>
+                            <span class="blog-tag">Sustainability</span>
+                            <span class="blog-tag">Environment</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1537130508299-46ab547b4be3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvZmZlZSUyMHJvYXN0aW5nfGVufDB8fDB8fHww" alt="Coffee Roasting">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">November 8, 2022</span>
+                        <h3 class="blog-title">Understanding Coffee Roast Profiles</h3>
+                        <p class="blog-excerpt">From light to dark, each roast level brings out different characteristics in coffee beans. Learn how to choose the perfect roast for your taste.</p>
+                        <div>
+                            <span class="blog-tag">Roasting</span>
+                            <span class="blog-tag">Education</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1726754628951-0ebd834300f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fGNvZmZlZSUyMGN1bHR1cmV8ZW58MHx8MHx8fDA%3D" alt="Coffee Culture">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">October 20, 2022</span>
+                        <h3 class="blog-title">Coffee Cultures Around the World</h3>
+                        <p class="blog-excerpt">From Italian espresso to Turkish coffee, explore how different cultures around the world uniquely prepare and joyfully enjoy their coffee.</p>
+                        <div>
+                            <span class="blog-tag">Culture</span>
+                            <span class="blog-tag">Travel</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <a href="#"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="blog-page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upcoming Events</h2>
+                <p>Join us for coffee tastings, workshops, and more</p>
+            </div>
+            <div class="events-list">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">25</span>
+                        <span class="month">Jul</span>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Coffee Cupping Session</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Mochang Kape Main Branch</p>
+                        <p class="event-description">Join our expert baristas for a guided coffee tasting experience. Learn how to identify different flavor notes and appreciate the nuances of specialty coffee.</p>
+                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">10</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Latte Art Workshop</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Mochang Kape Downtown</p>
+                        <p class="event-description">Learn the basics of latte art from our skilled baristas. This hands-on workshop will teach you how to create beautiful designs in your coffee at home.</p>
+                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">18</span>
+                        <span class="month">Sep</span>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Fall Menu Launch Party</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> All Mochang Kape Locations</p>
+                        <p class="event-description">Be the first to taste our new fall-inspired drinks and treats. Enjoy special discounts, live music, and giveaways throughout the day.</p>
+                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section class="blog-page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Current Promotions</h2>
+                <p>Special offers and seasonal deals</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1649589299832-fb810869ff17?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fDIlMjBjb2ZmZWUlMjAxJTIwcGFzdHJ5fGVufDB8fDB8fHww" alt="Summer Special">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Valid until August 31, 2023</span>
+                        <h3 class="blog-title">Summer Iced Coffee Bundle</h3>
+                        <p class="blog-excerpt">Buy any two iced coffee drinks and get a free pastry of your choice. Perfect for sharing with a friend on hot summer days!</p>
+                        <a href="#" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1643388180202-b34916730311?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGNvZmZlZSUyMHByb21vfGVufDB8fDB8fHww" alt="Loyalty Program" style="object-position: center;">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Ongoing Promotion</span>
+                        <h3 class="blog-title">Loyalty Program Launch</h3>
+                        <p class="blog-excerpt">Join our new loyalty program and earn points with every purchase. Sign up this month and receive 500 bonus points instantly!</p>
+                        <a href="#" class="read-more">Join Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1645165025351-5f14e96d974d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29mZmVlJTIwd29ya3Nob3B8ZW58MHx8MHx8fDA%3D" alt="Coffee Workshop">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Limited Time Offer</span>
+                        <h3 class="blog-title">Barista Workshop: 20% Off</h3>
+                        <p class="blog-excerpt">Bring a friend to any weekend workshop and save 20%. Learn essential brewing skills from our experts.</p>
+                        <a href="#" class="read-more">Book Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Mochang Kape Logo">
+                    <p>Premium coffee experience</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#menu">Menu</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://ph.pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates and offers</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mochang Kape. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/blogs.js"></script>
 </body>
 </html>

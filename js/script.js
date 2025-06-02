@@ -59,6 +59,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.querySelector('.next-btn');
     let currentTestimonial = 0;
     
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            testimonial.style.display = i === index ? 'block' : 'none';
+            testimonial.style.opacity = 0;
+            
+            if (i === index) {
+                // Fade in animation
+                setTimeout(() => {
+                    testimonial.style.transition = 'opacity 0.5s ease';
+                    testimonial.style.opacity = 1;
+                }, 10);
+            }
+        });
+        
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        
+        currentTestimonial = index;
+    }
+    
     // Hide all testimonials except the first one
     if (testimonials.length > 0) {
         testimonials.forEach((testimonial, index) => {
@@ -102,62 +123,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    function showTestimonial(index) {
-        testimonials.forEach((testimonial, i) => {
-            testimonial.style.display = i === index ? 'block' : 'none';
-            testimonial.style.opacity = 0;
-            
-            if (i === index) {
-                // Fade in animation
-                setTimeout(() => {
-                    testimonial.style.transition = 'opacity 0.5s ease';
-                    testimonial.style.opacity = 1;
-                }, 10);
-            }
-        });
-        
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
-        
-        currentTestimonial = index;
-    }
 
     function showThankYouModal(message) {
-        const modal = document.getElementById('thankYouModal');
-        const overlay = document.getElementById('overlay');
+        const modal = document.getElementById("thankYouModal");
+        const overlay = document.getElementById("overlay");
 
-        modal.querySelector('strong').textContent = message;
-        modal.style.display = 'block';
-        overlay.style.display = 'block';
+        modal.querySelector("strong").textContent = message;
+        modal.style.display = "block";
+        overlay.style.display = "block";
 
-        // Auto-hide after 3 seconds
+        // Hide after 3 seconds
         setTimeout(() => {
-            modal.style.display = 'none';
-            overlay.style.display = 'none';
+        modal.style.display = "none";
+        overlay.style.display = "none";
         }, 3000);
     }
-    
+
     document.getElementById("testimonialForm").addEventListener("submit", function (e) {
         e.preventDefault();
+        showThankYouModal("Thank you for sharing your insights!");
+        this.reset();
+    });
 
-        const formData = new FormData(this);
-
-        fetch("submit_testimonial.php", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === "success") {
-                showThankYouModal("Thank you for sharing your insights!");
-            } else {
-                alert("Error: " + data.message);
-            }
-        })  
-        .catch(error => {
-            alert("Request failed: " + error);
-        });
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        showThankYouModal("Thank you for getting in touch!");
         this.reset();
     });
 
